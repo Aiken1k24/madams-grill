@@ -81,3 +81,63 @@ form button {
 form button:hover {
     background-color: #8b0000;
 }
+
+/* Media Queries for Smaller Screens */
+
+/* Mobile (up to 768px wide) */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        max-width: 120px; /* Adjust logo size on mobile */
+    }
+
+    /* Navigation adjustments */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        display: block; /* Stack navigation links vertically */
+    }
+
+    /* Section adjustments */
+    section {
+        padding: 10px;
+    }
+
+    /* Form adjustments */
+    form {
+        max-width: 90%; /* Allow form to be more responsive */
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 15px;
+    }
+}
+
+/* Larger Mobile/Tablets (768px to 1024px wide) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Adjusting section padding */
+    section {
+        padding: 30px;
+    }
+
+    /* Navigation in a row for tablets */
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+}
