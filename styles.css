@@ -1,10 +1,18 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styles */
+body {
     background-color: #f8f1e4;
     color: #333;
+    text-align: center;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header with Background Image */
@@ -41,12 +49,12 @@ header h1 {
     margin: 0;
 }
 
-/* Logo - Upper Right Corner */
+/* Logo in Upper Left - Clickable */
 .logo-container {
     position: absolute;
     top: 10px;
-    right: 20px;
-    z-index: 3;
+    left: 15px;
+    z-index: 10;
 }
 
 .logo {
@@ -69,17 +77,19 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 5px 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 15px;
+    display: block;
 }
 
 /* Section Styles */
@@ -94,17 +104,19 @@ img {
     height: auto;
     display: block;
     margin: auto;
+    border-radius: 10px;
 }
 
 /* Footer */
 footer {
     background-color: #b22222;
     color: white;
-    text-align: center;
     padding: 10px;
     position: relative;
     bottom: 0;
     width: 100%;
+    font-size: 0.9rem;
+    margin-top: 20px;
 }
 
 /* Contact Form */
@@ -136,9 +148,9 @@ form button:hover {
 }
 
 /* Mobile (up to 768px wide) */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     header {
-        height: 20vh; /* Smaller height */
+        height: 20vh; /* Adjusted height for mobile */
     }
 
     header h1 {
