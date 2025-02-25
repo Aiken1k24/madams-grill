@@ -1,47 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Madam's Grill & Chill House</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
-</head>
-<body>
-    <header>
-        <a href="index.html">
-            <img src="images/logo.png" alt="Madam's Grill & Chill House Logo" class="logo">
-        </a>
-        <h1>Our Services</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="services">
-        <h2>What We Offer</h2>
-        <p>At Madam's Grill & Chill House, we provide top-quality barbecue catering, dine-in experiences, and takeaway options.</p>
-        <ul>
-            <li>BBQ Catering for Events</li>
-            <li>Dine-in with a Cozy Atmosphere</li>
-            <li>Takeout & Delivery Services</li>
-            <li>Custom BBQ Platters</li>
-        </ul>
-        <img src="images/PIC3.jpg" alt="BBQ Service" class="reveal">
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Madam's Grill & Chill House. All rights reserved.</p>
-    </footer>
-    
-    <script>
-        ScrollReveal().reveal('.reveal', { distance: '50px', duration: 1000, origin: 'bottom' });
-    </script>
-</body>
-</html>
+/* Header Styles */
+header {
+    position: relative;
+    width: 100%;
+    background-color: #b22222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Logo in Upper Left */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Center the Heading */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Navigation */
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
