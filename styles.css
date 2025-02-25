@@ -7,23 +7,45 @@ body {
     color: #333;
 }
 
+/* Headline Image Styles */
+.headline {
+    width: 100%;
+    overflow: hidden;
+}
+
+.headline-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 /* Header Styles */
 header {
     background-color: #b22222;
     color: white;
     padding: 15px;
     text-align: center;
+    position: relative;
+}
+
+/* Move logo to the upper right corner */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
 .logo {
-    max-width: 150px;
-    display: block;
-    margin: 0 auto 10px;
+    max-width: 120px;
+    height: auto;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -99,8 +121,9 @@ form button:hover {
         padding: 10px;
     }
 
+    /* Adjust logo size on mobile */
     .logo {
-        max-width: 120px; /* Adjust logo size on mobile */
+        max-width: 100px;
     }
 
     /* Navigation adjustments */
@@ -112,7 +135,7 @@ form button:hover {
 
     nav ul li {
         margin: 10px 0;
-        display: block; /* Stack navigation links vertically */
+        display: block;
     }
 
     /* Section adjustments */
@@ -122,7 +145,7 @@ form button:hover {
 
     /* Form adjustments */
     form {
-        max-width: 90%; /* Allow form to be more responsive */
+        max-width: 90%;
     }
 
     /* Footer adjustments */
