@@ -43,6 +43,14 @@ section {
     text-align: center;
 }
 
+/* Responsive Image Styles */
+img {
+    max-width: 100%;  /* Ensures images do not exceed container width */
+    height: auto;      /* Maintains aspect ratio */
+    display: block;    /* Removes extra spacing below images */
+    margin: auto;      /* Centers images */
+}
+
 /* Footer Styles */
 footer {
     background-color: #b22222;
