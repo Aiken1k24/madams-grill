@@ -7,33 +7,46 @@ body {
     color: #333;
 }
 
-/* Headline Image Styles */
-.headline {
-    width: 100%;
-    overflow: hidden;
-}
-
-.headline-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-/* Header Styles */
+/* Header with Background Image */
 header {
-    background-color: #b22222;
+    background: url('images/HEADLINE.jpg') center/cover no-repeat;
     color: white;
-    padding: 15px;
     text-align: center;
     position: relative;
+    width: 100%;
+    height: 20vh; /* 20% of viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Move logo to the upper right corner */
+/* Dark overlay for better text readability */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Headline text */
+header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Logo positioning - Upper Right Corner */
 .logo-container {
     position: absolute;
     top: 10px;
     right: 20px;
+    z-index: 3;
 }
 
 .logo {
@@ -42,10 +55,19 @@ header {
 }
 
 /* Navigation Styles */
+nav {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    z-index: 2;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
@@ -67,10 +89,10 @@ section {
 
 /* Responsive Image Styles */
 img {
-    max-width: 100%;  /* Ensures images do not exceed container width */
-    height: auto;      /* Maintains aspect ratio */
-    display: block;    /* Removes extra spacing below images */
-    margin: auto;      /* Centers images */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
 }
 
 /* Footer Styles */
@@ -113,57 +135,43 @@ form button:hover {
 }
 
 /* Media Queries for Smaller Screens */
-
-/* Mobile (up to 768px wide) */
 @media (max-width: 768px) {
-    /* Header adjustments */
     header {
-        padding: 10px;
+        height: 20vh; /* Maintain 20% height */
     }
 
-    /* Adjust logo size on mobile */
+    header h1 {
+        font-size: 1.5rem;
+    }
+
     .logo {
         max-width: 100px;
     }
 
-    /* Navigation adjustments */
     nav ul {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     nav ul li {
-        margin: 10px 0;
-        display: block;
+        margin: 5px 0;
     }
 
-    /* Section adjustments */
     section {
         padding: 10px;
     }
-
-    /* Form adjustments */
-    form {
-        max-width: 90%;
-    }
-
-    /* Footer adjustments */
-    footer {
-        padding: 15px;
-    }
 }
 
-/* Larger Mobile/Tablets (768px to 1024px wide) */
 @media (min-width: 768px) and (max-width: 1024px) {
-    /* Adjusting section padding */
+    header {
+        height: 20vh;
+    }
+
     section {
         padding: 30px;
     }
 
-    /* Navigation in a row for tablets */
     nav ul {
-        display: flex;
         flex-direction: row;
         justify-content: center;
     }
