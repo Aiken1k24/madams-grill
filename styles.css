@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body */
+/* Body Styles */
 body {
     background-color: #f8f1e4;
     color: #333;
@@ -19,7 +19,7 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 25vh; /* Adjusted height for mobile */
+    height: 60vh; /* Default height */
     background: url('images/HEADLINE.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@ header {
     color: white;
 }
 
-/* Dark overlay for better text visibility */
+/* Dark overlay for text readability */
 header::before {
     content: "";
     position: absolute;
@@ -36,36 +36,41 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
     z-index: 1;
 }
 
+/* Headline text */
 header h1 {
     position: relative;
     z-index: 2;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: bold;
+    margin: 0;
 }
 
-/* Logo */
+/* Logo in Upper Left - Clickable */
 .logo-container {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 15px;
     z-index: 10;
 }
 
 .logo {
-    max-width: 70px;
+    max-width: 100px;
     height: auto;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Navigation */
 nav {
+    position: relative; /* Moved below header */
     width: 100%;
-    background: #b22222;
-    padding: 10px 0;
     text-align: center;
+    z-index: 2;
+    background: #b22222; /* Added background for better contrast */
+    padding: 10px 0;
 }
 
 nav ul {
@@ -89,7 +94,7 @@ nav ul li a {
     display: block;
 }
 
-/* Page Sections */
+/* Section Styles */
 section {
     padding: 20px;
     text-align: center;
@@ -109,6 +114,8 @@ footer {
     background-color: #b22222;
     color: white;
     padding: 10px;
+    position: relative;
+    bottom: 0;
     width: 100%;
     font-size: 0.9rem;
     margin-top: 20px;
@@ -145,67 +152,44 @@ form button:hover {
 /* Mobile (up to 768px wide) */
 @media screen and (max-width: 768px) {
     header {
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 10px;
+        height: 25vh; /* Smaller height */
     }
 
     header h1 {
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .logo-container {
-        top: 10px;
-        left: 10px;
+        font-size: 2rem; /* Adjusted size */
+        padding: 10px;
     }
 
     .logo {
-        max-width: 70px;
+        max-width: 70px; /* Scaled for mobile */
     }
 
+    /* Navigation Adjustments */
     nav {
-        width: 100%;
-        padding: 8px 0;
+        position: relative;
+        top: 0;
+        background: #b22222;
+        padding: 10px 0;
     }
 
     nav ul {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 5px;
     }
 
     nav ul li {
-        margin: 5px 0;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-        padding: 6px 10px;
+        margin: 8px 0;
     }
 
     section {
         padding: 15px;
-        text-align: center;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
     }
 }
 
 /* Tablets (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
-        height: 22vh;
+        height: 30vh;
     }
 
     section {
@@ -218,6 +202,6 @@ form button:hover {
     }
 
     nav ul li {
-        margin: 0 15px;
+        margin: 0 10px;
     }
 }
