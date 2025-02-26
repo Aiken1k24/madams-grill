@@ -19,15 +19,13 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 60vh; /* Default height for desktops */
+    height: 60vh; /* Default height */
     background: url('images/HEADLINE.jpg') center/cover no-repeat;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /* Pushes content downward */
+    justify-content: center;
     text-align: center;
     color: white;
-    padding-bottom: 40px; /* Creates space below the title */
 }
 
 /* Dark overlay for text readability */
@@ -48,7 +46,7 @@ header h1 {
     z-index: 2;
     font-size: 4rem;
     font-weight: bold;
-    margin-bottom: 20px; /* Lowered title */
+    margin: 0;
 }
 
 /* Logo in Upper Left - Clickable */
@@ -67,7 +65,7 @@ header h1 {
 
 /* Navigation */
 nav {
-    position: relative;
+    position: relative; /* Moved below header */
     width: 100%;
     text-align: center;
     z-index: 2;
@@ -154,13 +152,12 @@ form button:hover {
 /* Mobile (up to 768px wide) */
 @media screen and (max-width: 768px) {
     header {
-        height: 35vh; /* Increased height for better spacing */
-        padding-bottom: 40px; /* Creates space below the title */
+        height: 25vh; /* Smaller height */
     }
 
     header h1 {
-        font-size: 2rem;
-        margin-bottom: 10px; /* Lowered the title */
+        font-size: 2rem; /* Adjusted size */
+        padding: 10px;
     }
 
     .logo {
@@ -170,6 +167,7 @@ form button:hover {
     /* Navigation Adjustments */
     nav {
         position: relative;
+        top: 0;
         background: #b22222;
         padding: 10px 0;
     }
@@ -177,11 +175,14 @@ form button:hover {
     nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 10px; /* Creates even spacing */
     }
 
     nav ul li {
         margin: 8px 0;
+    }
+
+    section {
+        padding: 15px;
     }
 }
 
