@@ -19,7 +19,7 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 60vh; /* Default height */
+    height: 60vh;
     background: url('images/HEADLINE.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
@@ -38,33 +38,31 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-/* Logo and Title container */
-.header-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    max-width: 1200px;
+/* Logo positioned in the upper left corner */
+.logo-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
 }
 
-/* Logo positioned to the left */
 .logo {
-    max-width: 80px;
+    max-width: 60px; /* Smaller size */
     height: auto;
-    margin-right: 20px; /* Space between logo and title */
+    transition: all 0.3s ease-in-out;
 }
 
 /* Headline text centered */
 header h1 {
+    position: relative;
+    z-index: 2;
     font-size: 3rem;
     font-weight: bold;
-    flex-grow: 1;
+    margin-top: 20px;
 }
 
 /* Navigation placed below the title */
@@ -123,15 +121,6 @@ footer {
 @media screen and (max-width: 768px) {
     header {
         height: 40vh;
-    }
-
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        margin: 0 0 10px 0; /* Moves logo above title */
     }
 
     header h1 {
