@@ -92,7 +92,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white; /* Set text to black */
+    color: #010709; /* Set text to charcoal */
     font-weight: bold;
     padding: 8px 15px;
     display: block;
@@ -102,6 +102,7 @@ nav ul li a {
 
 /* Section Styles */
 section {
+    background-color: #f8f0e3;
     padding: 20px;
     text-align: center;
 }
