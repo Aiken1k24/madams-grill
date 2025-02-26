@@ -148,7 +148,7 @@ form button:hover {
 }
 
 textarea {
-    height: 250px; /* Adjust height as needed */
+    height: 150px; /* Adjust height as needed */
     resize: vertical; /* Allows resizing only up and down */
 }
 
