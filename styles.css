@@ -149,36 +149,49 @@ form button:hover {
     background-color: #8b0000;
 }
 
-/* Mobile (up to 768px wide) */
+/* ----------- MOBILE (up to 768px wide) ----------- */
 @media screen and (max-width: 768px) {
+    /* Make the header taller to accommodate lower title */
     header {
-        height: 25vh; /* Smaller height */
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* push content downward */
+        padding-bottom: 40px; /* space below the title */
     }
 
     header h1 {
-        font-size: 2rem; /* Adjusted size */
-        padding: 10px;
+        font-size: 2rem;
+        margin-bottom: 20px; /* lowers the title */
     }
 
     .logo {
-        max-width: 70px; /* Scaled for mobile */
+        max-width: 70px; /* smaller logo on mobile */
     }
 
-    /* Navigation Adjustments */
+    /* Navigation below the header */
     nav {
         position: relative;
-        top: 0;
+        width: 100%;
         background: #b22222;
         padding: 10px 0;
     }
 
     nav ul {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 10px; /* consistent spacing */
     }
 
     nav ul li {
-        margin: 8px 0;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 10px;
+        display: block;
     }
 
     section {
@@ -186,7 +199,7 @@ form button:hover {
     }
 }
 
-/* Tablets (768px to 1024px) */
+/* ----------- TABLETS (768px to 1024px) ----------- */
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
         height: 30vh;
