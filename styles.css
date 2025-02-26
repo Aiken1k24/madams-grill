@@ -22,7 +22,7 @@ header {
     height: 60vh; /* Default height */
     background: url('images/HEADLINE.jpg') center/cover no-repeat;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack elements */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -42,51 +42,48 @@ header::before {
     z-index: 1;
 }
 
-/* Headline text */
+/* Headline text centered */
 header h1 {
     position: relative;
     z-index: 2;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Space between title and navigation */
 }
 
-/* Navigation */
+/* Navigation placed below the title */
 nav {
     position: relative;
     width: 100%;
-    text-align: center;
     z-index: 2;
-    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Space between title and nav */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    display: flex; /* Horizontal layout */
+    gap: 20px;
 }
 
 nav ul li {
-    flex: 1 1 30%; /* First row: 3 items */
-    text-align: center;
-}
-
-nav ul li:nth-child(4),
-nav ul li:nth-child(5) {
-    flex: 1 1 45%; /* Second row: 2 items */
+    display: inline-block;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 15px;
-    display: block;
-    background: #b22222;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
 
@@ -110,94 +107,31 @@ footer {
     background-color: #b22222;
     color: white;
     padding: 10px;
-    position: relative;
-    bottom: 0;
     width: 100%;
     font-size: 0.9rem;
     margin-top: 20px;
 }
 
-/* Contact Form */
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-form input, form textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #b22222;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #8b0000;
-}
-
 /* Mobile (up to 768px wide) */
 @media screen and (max-width: 768px) {
     header {
-        height: 25vh; /* Smaller height */
+        height: 40vh; /* Adjusted for better fit */
     }
 
     header h1 {
         font-size: 2rem; /* Adjusted size */
-        padding: 10px;
-    }
-
-    .logo {
-        max-width: 70px; /* Scaled for mobile */
-    }
-
-    /* Navigation Adjustments */
-    nav {
-        position: relative;
-        top: 0;
-        padding: 10px 0;
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        gap: 10px; /* Less spacing between links */
     }
 
-    nav ul li {
-        flex: none;
-        width: 100%;
+    nav ul li a {
+        font-size: 1rem;
+        padding: 8px 10px;
     }
 
     section {
         padding: 15px;
-    }
-}
-
-/* Tablets (768px to 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    header {
-        height: 30vh;
-    }
-
-    section {
-        padding: 30px;
-    }
-
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 0 10px;
     }
 }
