@@ -18,7 +18,7 @@ body {
 /* Header with Background Image */
 /* Ensure header is centered */
 header {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 60vh;
     background: url('images/HEADLINE.jpg') center/cover no-repeat;
@@ -34,13 +34,13 @@ header {
 /* Dark overlay for text readability */
 header::before {
     content: "";
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
-    z-index: 2;
+    z-index: 1;
 }
 
 /* Ensure title is centered */
