@@ -28,7 +28,7 @@ header {
     justify-content: center;
     text-align: center;
     color: white;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 /* Dark overlay for text readability */
@@ -60,7 +60,7 @@ header h1 {
     z-index: 10;
 }
 .logo {
-    max-width: 70px; /* Smaller size */
+    max-width: 80px; /* Smaller size */
 }
 
 
@@ -182,7 +182,7 @@ textarea {
     }
 
     .logo {
-        max-width: 50px; /* Smaller logo */
+        max-width: 40px; /* Smaller logo */
     }
 
     /* Stack navigation menu below header */
