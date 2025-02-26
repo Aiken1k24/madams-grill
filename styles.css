@@ -47,6 +47,9 @@ header h1 {
     left: 15px;
     z-index: 10;
 }
+.logo {
+    max-width: 70px; /* Smaller size */
+}
 
 
 /* Ensure navigation is BELOW the header title */
