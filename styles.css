@@ -30,7 +30,7 @@
     /* Stack navigation menu below header */
     nav {
         width: 100%;
-        background: #b22222; /* Keeps contrast */
+        background: transparent; /* Keeps contrast */
         padding: 10px 0;
     }
 
