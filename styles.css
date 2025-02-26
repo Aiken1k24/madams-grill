@@ -22,7 +22,7 @@ header {
     height: 60vh; /* Default height */
     background: url('images/HEADLINE.jpg') center/cover no-repeat;
     display: flex;
-    flex-direction: column; /* Stack elements */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -42,13 +42,29 @@ header::before {
     z-index: 1;
 }
 
-/* Headline text centered */
-header h1 {
+/* Logo and Title container */
+.header-content {
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Logo positioned to the left */
+.logo {
+    max-width: 80px;
+    height: auto;
+    margin-right: 20px; /* Space between logo and title */
+}
+
+/* Headline text centered */
+header h1 {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 15px; /* Space between title and navigation */
+    flex-grow: 1;
 }
 
 /* Navigation placed below the title */
@@ -58,14 +74,14 @@ nav {
     z-index: 2;
     display: flex;
     justify-content: center;
-    margin-top: 10px; /* Space between title and nav */
+    margin-top: 10px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Horizontal layout */
+    display: flex;
     gap: 20px;
 }
 
@@ -93,15 +109,6 @@ section {
     text-align: center;
 }
 
-/* Responsive Image Styles */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-    border-radius: 10px;
-}
-
 /* Footer */
 footer {
     background-color: #b22222;
@@ -115,15 +122,25 @@ footer {
 /* Mobile (up to 768px wide) */
 @media screen and (max-width: 768px) {
     header {
-        height: 40vh; /* Adjusted for better fit */
+        height: 40vh;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 0 0 10px 0; /* Moves logo above title */
     }
 
     header h1 {
-        font-size: 2rem; /* Adjusted size */
+        font-size: 2rem;
     }
 
     nav ul {
-        gap: 10px; /* Less spacing between links */
+        flex-direction: row;
+        gap: 10px;
     }
 
     nav ul li a {
