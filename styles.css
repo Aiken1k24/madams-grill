@@ -92,7 +92,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #010709; /* Set text to charcoal */
+    color: white; /* Set text to charcoal */
     font-weight: bold;
     padding: 8px 15px;
     display: block;
