@@ -151,6 +151,11 @@ form button:hover {
     background-color: #8b0000;
 }
 
+textarea {
+    height: 150px; /* Adjust height as needed */
+    resize: vertical; /* Allows resizing only up and down */
+}
+
 /* Mobile (up to 768px wide) */
 @media screen and (max-width: 768px) {
     header {
