@@ -6,7 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body Styles */
+/* Body */
 body {
     background-color: #f8f1e4;
     color: #333;
@@ -19,7 +19,7 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 60vh; /* Default height */
+    height: 25vh; /* Adjusted height for mobile */
     background: url('images/HEADLINE.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@ header {
     color: white;
 }
 
-/* Dark overlay for text readability */
+/* Dark overlay for better text visibility */
 header::before {
     content: "";
     position: absolute;
@@ -36,41 +36,36 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-/* Headline text */
 header h1 {
     position: relative;
     z-index: 2;
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin: 0;
 }
 
-/* Logo in Upper Left - Clickable */
+/* Logo */
 .logo-container {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 10px;
+    left: 10px;
     z-index: 10;
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 70px;
     height: auto;
-    transition: all 0.3s ease-in-out;
 }
 
 /* Navigation */
 nav {
-    position: relative; /* Moved below header */
     width: 100%;
-    text-align: center;
-    z-index: 2;
-    background: #b22222; /* Added background for better contrast */
+    background: #b22222;
     padding: 10px 0;
+    text-align: center;
 }
 
 nav ul {
@@ -94,7 +89,7 @@ nav ul li a {
     display: block;
 }
 
-/* Section Styles */
+/* Page Sections */
 section {
     padding: 20px;
     text-align: center;
@@ -114,8 +109,6 @@ footer {
     background-color: #b22222;
     color: white;
     padding: 10px;
-    position: relative;
-    bottom: 0;
     width: 100%;
     font-size: 0.9rem;
     margin-top: 20px;
@@ -152,44 +145,67 @@ form button:hover {
 /* Mobile (up to 768px wide) */
 @media screen and (max-width: 768px) {
     header {
-        height: 25vh; /* Smaller height */
-    }
-
-    header h1 {
-        font-size: 2rem; /* Adjusted size */
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         padding: 10px;
     }
 
-    .logo {
-        max-width: 70px; /* Scaled for mobile */
+    header h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
     }
 
-    /* Navigation Adjustments */
+    .logo-container {
+        top: 10px;
+        left: 10px;
+    }
+
+    .logo {
+        max-width: 70px;
+    }
+
     nav {
-        position: relative;
-        top: 0;
-        background: #b22222;
-        padding: 10px 0;
+        width: 100%;
+        padding: 8px 0;
     }
 
     nav ul {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 5px;
     }
 
     nav ul li {
-        margin: 8px 0;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 6px 10px;
     }
 
     section {
         padding: 15px;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
     }
 }
 
 /* Tablets (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
-        height: 30vh;
+        height: 22vh;
     }
 
     section {
@@ -202,6 +218,6 @@ form button:hover {
     }
 
     nav ul li {
-        margin: 0 10px;
+        margin: 0 15px;
     }
 }
