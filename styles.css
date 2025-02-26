@@ -66,6 +66,8 @@ header h1 {
 
 /* Ensure navigation is BELOW the header title */
 nav {
+    position: relative; /* Ensure it's above the overlay */
+    z-index: 2; /* Higher than the overlay */
     width: 100%;
     text-align: center;
     padding: 15px 0;
