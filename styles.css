@@ -149,7 +149,7 @@ form button {
 }
 
 form button:hover {
-    background-color: transparent;
+    background-color: inherit;
 }
 
 /* Mobile (up to 768px wide) */
