@@ -172,6 +172,8 @@ textarea {
     header h1 {
         font-size: 1.8rem; /* Slightly smaller title */
         margin: 10px 0;
+        margin-top: 20px; /* Adds space above the title */
+        margin-bottom: 10px; /* Adds space below the title */
     }
 
     /* Keep logo in the upper left */
