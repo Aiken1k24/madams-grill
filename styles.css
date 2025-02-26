@@ -16,43 +16,31 @@ body {
 }
 
 /* Header with Background Image */
+/* Ensure header is centered */
 header {
     position: relative;
     width: 100%;
-    height: 60vh; /* Default height */
+    height: 60vh;
     background: url('images/HEADLINE.jpg') center/cover no-repeat;
     display: flex;
+    flex-direction: column; /* Stack elements vertically */
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    padding-top: 50px;
 }
 
-/* Dark overlay for text readability */
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
-    z-index: 1;
-}
-
-/* Headline text */
+/* Ensure title is centered */
 header h1 {
     position: relative;
     z-index: 2;
     font-size: 4rem;
     font-weight: bold;
-    margin: 0;
-    text-align: center;
-    width: 100%;
+    margin-bottom: 20px; /* Adds space below title */
 }
 
-
-/* Logo in Upper Left - Clickable */
+/* Ensure logo is in the upper left */
 .logo-container {
     position: absolute;
     top: 15px;
@@ -60,22 +48,15 @@ header h1 {
     z-index: 10;
 }
 
-.logo {
-    max-width: 100px;
-    height: auto;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Navigation */
+/* Ensure navigation is BELOW the header title */
 nav {
-    position: relative; /* Moved below header */
     width: 100%;
     text-align: center;
-    z-index: 2;
-    background: transparent; /* Added background for better contrast */
-    padding: 10px 0;
+    padding: 15px 0;
+    background: transparent; /* Removes background */
 }
 
+/* Style the navigation links */
 nav ul {
     list-style: none;
     padding: 0;
@@ -90,12 +71,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: black; /* Set text to black */
     font-weight: bold;
     padding: 8px 15px;
     display: block;
+    background: none; /* Remove any background */
 }
+
 
 /* Section Styles */
 section {
