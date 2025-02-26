@@ -137,9 +137,9 @@ form input, form textarea {
 }
 
 form button {
-    background-color: #b22222;
+    background-color: transparent;
     color: white;
-    padding: 10px;
+    padding: 10px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
