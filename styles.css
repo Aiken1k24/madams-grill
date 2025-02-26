@@ -47,7 +47,10 @@ header h1 {
     font-size: 4rem;
     font-weight: bold;
     margin: 0;
+    text-align: center;
+    width: 100%;
 }
+
 
 /* Logo in Upper Left - Clickable */
 .logo-container {
@@ -168,7 +171,7 @@ form button:hover {
     nav {
         position: relative;
         top: 0;
-        background: #b22222;
+        background: transparent;
         padding: 10px 0;
     }
 
