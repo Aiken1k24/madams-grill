@@ -19,15 +19,13 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 60vh; /* Default height */
     background: url('images/HEADLINE.jpg') center/cover no-repeat;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    padding-top: 20px;
 }
 
 /* Dark overlay for text readability */
@@ -38,11 +36,20 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
     z-index: 1;
 }
 
-/* Logo positioned in the upper left corner */
+/* Headline text */
+header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Logo in Upper Left - Clickable */
 .logo-container {
     position: absolute;
     top: 15px;
@@ -51,28 +58,19 @@ header::before {
 }
 
 .logo {
-    max-width: 60px; /* Smaller size */
+    max-width: 100px;
     height: auto;
     transition: all 0.3s ease-in-out;
 }
 
-/* Headline text centered */
-header h1 {
-    position: relative;
-    z-index: 2;
-    font-size: 3rem;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-/* Navigation placed below the title */
+/* Navigation */
 nav {
-    position: relative;
+    position: relative; /* Moved below header */
     width: 100%;
+    text-align: center;
     z-index: 2;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    background: #b22222; /* Added background for better contrast */
+    padding: 10px 0;
 }
 
 nav ul {
@@ -80,25 +78,20 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline-block;
+    margin: 5px 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
-    padding: 10px 15px;
-    transition: all 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    padding: 8px 15px;
+    display: block;
 }
 
 /* Section Styles */
@@ -107,37 +100,108 @@ section {
     text-align: center;
 }
 
+/* Responsive Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
 /* Footer */
 footer {
     background-color: #b22222;
     color: white;
     padding: 10px;
+    position: relative;
+    bottom: 0;
     width: 100%;
     font-size: 0.9rem;
     margin-top: 20px;
 }
 
+/* Contact Form */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #b22222;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #8b0000;
+}
+
 /* Mobile (up to 768px wide) */
 @media screen and (max-width: 768px) {
     header {
-        height: 40vh;
+        height: 25vh; /* Smaller height */
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Adjusted size */
+        padding: 10px;
+    }
+
+    .logo {
+        max-width: 70px; /* Scaled for mobile */
+    }
+
+    /* Navigation Adjustments */
+    nav {
+        position: relative;
+        top: 0;
+        background: #b22222;
+        padding: 10px 0;
     }
 
     nav ul {
-        flex-direction: row;
-        gap: 10px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    nav ul li a {
-        font-size: 1rem;
-        padding: 8px 10px;
+    nav ul li {
+        margin: 8px 0;
     }
 
     section {
         padding: 15px;
+    }
+}
+
+/* Tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        height: 30vh;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
     }
 }
